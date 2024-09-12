@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanism</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <audio id="myAudio">
+        <source src="resources/sounds/grind.wav" type="audio/wav">
+    </audio>
+    <audio id="soundTrack">
+        <source src="resources/sounds/ancient2.mp3" type="audio/wav">
+    </audio>
+    
+
+
+<h1>Ce dispozitiv ciudat!</h1>
+<p id="textParagraph">Mă întreb ce fac toate butoanele astea...</p>
+
+<div id="mechanismContainer">
+   
+
+    <div id="mechanism">
+        <img class="pieces" id="black" src="resources/black.png" alt="" style="max-width: 189px">
+        <img class="pieces" id="outside" src="resources/outside.png" alt="" style="max-width: 350px">
+        <img class="pieces" id="inside" src="resources/inside.png" alt="" style="max-width: 350px">
+        <img class="pieces" id="bigWheel" src="resources/bigWheel.png" alt="" style="max-width: 300px">
+        <img class="pieces" id="cross" src="resources/cross.png" alt="" style="max-width: 300px">
+        <img class="pieces" id="smallWheel" src="resources/smallWheel.png" alt="" style="max-width: 350px">
+        
+    </div>
+
+</div>
+
+    <div id="buttons">
+        <img class="stoneBtns" id = "btnCrossL" src="resources/stoneBtn.png" alt="Cross Rotate Left" onclick="rotateLeft(cross)">
+        
+        <img class="stoneBtns" id = "btnInsideL" src="resources/stoneBtn.png" alt="Inside Rotate Left" onclick="rotateLeft(inside)">
+
+        <img class="stoneBtns" id = "btnBigWheelL" src="resources/stoneBtn.png" alt="Big Wheel Rotate Left" onclick="rotateLeft(bigWheel)">
+        <img class="stoneBtns" id = "btnToggle2" src="resources/stoneBtn.png" alt="Toggle" onclick="toggleButtons()">  
+        
+        <img class="stoneBtns" id = "btnOutsideL" src="resources/stoneBtn.png" alt="Outside Rotate Left" onclick="rotateLeft(outside)">
+        <img class="stoneBtns" id = "btnCrossR" src="resources/stoneBtn.png" alt="Cross Rotate Right" onclick="rotateRight(cross)">  
+        <img class="stoneBtns" id = "btnSmallWheelR" src="resources/stoneBtn.png" alt="Small Wheel Rotate Right" onclick="rotateRight(smallWheel)">  
+        <img class="stoneBtns" id = "btnNothing1" src="resources/stoneBtn.png" alt="Nothing Button" onclick="">
+        <img class="stoneBtns" id = "btnTextParagraphL" src="resources/stoneBtn.png" alt="Text Rotate Left" onclick="rotateLeft(textParagraph)">
+        <img class="stoneBtns" id = "btnToggle1" src="resources/stoneBtn.png" alt="Toggle" onclick="toggleButtons()">  
+        <img class="stoneBtns" id = "btnNothing2" src="resources/stoneBtn.png" alt="Nothing Button" onclick="">
+        <img class="stoneBtns" id = "btnInsideR" src="resources/stoneBtn.png" alt="Inside Rotate Right" onclick="rotateRight(inside)">  
+        <img class="stoneBtns" id = "btnNothing3" src="resources/stoneBtn.png" alt="Nothing Button" onclick="">
+        <img class="stoneBtns" id = "btnBigWheelR" src="resources/stoneBtn.png" alt="Big Wheel Rotate Right" onclick="rotateRight(bigWheel)">  
+        <img class="stoneBtns" id = "btnSmallWheelL" src="resources/stoneBtn.png" alt="Small Wheel Rotate Left" onclick="rotateLeft(smallWheel)">
+        
+        <img class="stoneBtns" id = "btnNothing4" src="resources/stoneBtn.png" alt="Nothing Button" onclick="">
+                
+        <img class="stoneBtns" id = "btnTextParagraphL" src="resources/stoneBtn.png" alt="Text Rotate Right" onclick="rotateRight(textParagraph)">  
+
+        <img class="stoneBtns" id = "btnOutsideR" src="resources/stoneBtn.png" alt="Outside Rotate Right" onclick="rotateRight(outside)">  
+        <p class="finalText" id="finalText" style="visibility: hidden">Wow, se pare că pot deschide mecanismul! Mă întreb ce pot găsi în interior...</p>
+        <button id="btnOpen" class="button-62" style="visibility: hidden" onclick="openNextPage()">Deschide</button>
+    </div>
+    <div id="overlay"></div>
+
+    <div id="customAlert" class="hidden">
+        <div class="alert-content">
+            <span id="alertMessage"></span>
+            <img src="resources/antikythera.png" width="300px" alt="antikythera">
+            <button id="okBtn" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="sounds.js"></script>
+    <script  src="antikythera.js"></script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+.puzzle { 
+    margin: 20px;
+}
+
+body {
+    
+    font-family: "Calistoga", serif;
+    font-family: "Aref Ruqaa Ink", serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: cornsilk;
+}
+
+h1{
+    font-size: larger;
+}
+
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  
+}
+
+#mapsImg{
+    max-width: 350px;
+    max-height: 240px;
+    box-shadow: 0px 0px 20px rgb(155, 154, 154);
+}
+
+#notAlex{
+    margin-bottom: 10px;;
+}
+#pContainer{
+    display: flex;
+    justify-content: center;
+}
+#atlantisDescription{
+max-width: 450px;
+}
+
+#smallWonders{
+    max-width: 600px;
+    position: absolute;
+    top: 500px;
+}
+
+.smallWonder{
+    width:  12%;
+}
+
+.generalText{
+    align-items: center;
+    max-width: 450px;
+    margin-left: 15px;
+}
+
+#intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-container {
+    position: relative;
+    display: inline-block;
+    max-width: 400px;
+}
+
+
+.wonder {
+    position: absolute;
+    width: 3.5%;
+    height: auto;
+}
+
+
+#wondersMap {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+#wonder4{
+    top: 40%;
+    left: 26.8%;
+    }
+
+
+#wonder1{
+    top: 77.8%;
+    left: 54.1%;
+    }
+
+
+#wonder2{
+    top: 62.7%;
+    left: 90.6%;
+  }    
+
+#wonder3{
+    top: 37.6%;
+    left: 41.8%;
+  }    
+
+#wonder5{
+    top: 43.3%;
+    left: 43.1%;
+  }     
+
+#wonder6{
+    top: 47.8%;
+    left: 44.7%;
+  }     
+
+#wonder7{
+    top: 71.2%;
+    left: 51%;
+  }   
+
+
+/* Buttons:  */
+
+.button-62 {
+  margin-top: 15px;
+  background: linear-gradient(to bottom right, #6047ef, #5ac0ff);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+
+/* Philosophers: */
+#philosophersData{
+    font-size: small;
+}
+
+#philosophersMap {
+    /* max-width: 600px; */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    #philosophersMap {
+       
+        width: 800px;
+        height: auto;
+        display: block;
+    }
+
+}
+
+/* Antikythera */
+
+#mechanismContainer {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mechanism {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pieces {
+    position: absolute;
+   
+}
+
+
+#buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    flex-wrap: wrap;
+}
+
+.stoneBtns{
+    width: 30px;
+    padding: 10px;
+}
+#cross{
+    width: 224px;
+}
+
+#bigWheel{
+    width: 198px;
+    
+    
+}
+#smallWheel{
+    width: 55px;
+   
+}
+#inside{
+    width: 150px;
+}
+
+
+/* Street Map */
+
+
+#mapFrame{
+    position: absolute;
+    width: 370px;
+    height: 370px;    
+    border: 2px solid red;
+    border-radius: 50%;
+   
+   
+}
+
+#mapDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#framePicture{
+    width: 380px;
+    position: relative;
+    pointer-events: none;
+}
+
+#googleMapContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.finalText{
+    position: absolute;
+}
+
+#btnOpen{
+    position: absolute;
+    top: 60%;
+}
+
+#outsideGlow{
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px red;
+}
+
+
+
+/* Alert box: */
+
+.hidden {
+    display: none;
+}
+#customAlert, #introAlert, #notAlexPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: white; */
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(253, 254, 244, 0.5);
+    color: black;
+    width: 300px;
+    height: 80%;
+    background: linear-gradient(to bottom right, #f7f49e, #3a3913);
+    z-index: 999; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#notAlexPopup{
+    visibility: hidden;
+    max-height: 100px;
+}
+
+#introAlert {
+    width: 350px;
+    height: 50%;
+}
+
+.introBtn, .introBtn1{
+    
+    background-color: rgb(204, 201, 128);
+    border-radius: 5px;
+    
+    height: 30px;
+    box-shadow: -2px 2px 3px rgb(87, 86, 86);
+}
+
+.introBtn{
+    position: absolute;
+    top: 85%;
+    width: 100px;
+}
+
+
+
+.alert-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+    
+
+}
+
+#alertMessage {
+    margin-bottom: 15px;
+}
+
+#okBtn{
+    background-color: rgb(204, 201, 128);
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    box-shadow: -2px 2px 3px rgb(87, 86, 86);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95); 
+    z-index: 900; 
+    visibility: hidden; 
+}
+
+
+
+/* Walk::  */
+
+#floor{
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#mainWalkDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#tileLetters {
+    position: absolute;
+    color: rgb(113, 84, 22);
+    font-size: xx-large;
+    text-shadow: -1px 1px 2px rgb(54, 42, 4);
+    pointer-events: none;
+}
+
+.tileDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#alexandriaForm{
+    visibility: hidden;
+    }
+#alexandriaBtn{
+    margin-top: 10px;
+}    

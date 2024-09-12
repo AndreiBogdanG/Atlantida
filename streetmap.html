@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Map</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="soundTrack">
+        <source src="resources/sounds/sirtaki.mp3" type="audio/wav">
+    </audio>
+<div id="googleMapContainer">
+<h1>INCREDIBIL!</h1>
+<p id="generalText" class="generalText">Mecanismul s-a deschis, iar în interior a apărut un ecran de cristal. Imaginea din el poate fi mișcată trăgând-o cu degetul!</p>
+
+<div id="mapDiv">
+   
+    <iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=!4v1725535696425!6m8!1m7!1s9pK6z2VkY6bw2FwA-mFecA!2m2!1d37.97792371397748!2d23.72304054276168!3f125.87673566545831!4f-6.060235382627894!5f0.7820865974627469" width="800" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <img id = "framePicture" src="resources/mapFrame.png" alt="">
+   
+</div>
+
+<p class="generalText">Pare a fi un magazin de antichități din Atena. 
+    Te trezești din vis cu convingerea că acolo este primul indiciu pentru a găsi Atlantida.<br> Dar oare când vei ajunge la Atena?!?</p>
+
+<!-- <button class="button-62" onclick="window.close()">SFÂRȘIT</button> -->
+<p> - SFÂRȘIT -</p>
+
+</div>
+
+
+
+
+</div>
+<div id="overlay"></div>
+<div id="customAlert" class="hidden">
+    <div class="alert-content">
+        <span id="alertMessage"></span>
+        <img src="resources/antikythera_view.png" width="300px" alt="">
+        <button id="okBtn" onclick="closeAlert()">DESCHIDE</button>
+    </div>
+</div>
+
+    <script src="streetmap.js"></script>
+    <script src="sounds.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaje</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="soundTrack">
+        <source src="resources/sounds/ancient2.mp3" type="audio/wav">
+    </audio>
+
+    <div id="customAlert" class="hidden">
+        <div class="alert-content">
+            <span id="alertMessage"></span>
+            <img src="resources/statues.jpg" width="300px" alt="">
+            <button id="okBtn" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+<h1>Ordinea cronologică după anul nașterii îți va dezvălui un număr:</h1>
+
+<div class="mainDiv">
+<div>
+<img id="philosophersMap" src="resources/Philosophers.jpg" alt="">
+
+<p id="philosophersData"> 624 – 546 - Filosof presocratic din Milet.
+    <br>
+    500 – 428 - Filosof presocratic din Clazomenae.
+    <br>
+    470 – 399 - Filosoful clasic grec care a băut otravă .
+    <br>
+    428 – 348 - Elev al lui Socrate și profesor al lui Aristotel, celebru pentru Dialoguri.
+    <br>
+    412 – 323 - Filosof celebru pentru "butoiul" său.
+    <br>
+    384 – 322 - Elev al lui Plato.
+</p>
+<hr>
+
+
+<div id="overlay"></div>
+
+<form id="myform" action="">
+    <input type="text" id="userAnswer" name="fname" placeholder="Scrie nr. convertit în litere" ><br>
+    <input class="button-62" id="btnSubmitPhilosophers" type="submit" value="Răspunde">
+</form>
+</div>
+
+
+
+
+</div>
+    <script src="philosophers.js"></script>
+    <script src="sounds.js"></script>
+</body>
+</html>

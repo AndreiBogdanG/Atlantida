@@ -1,0 +1,178 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+  }
+
+
+#mainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#skyContainer {
+    left: 20%;
+    top: 20%;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+#starrySky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+#telescopeLens {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: 3px solid gray;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    overflow: hidden;
+    pointer-events: none;
+
+    background-image: url('resources/starry-sky.jpg');
+    background-size: 100vw 90vw; 
+    background-repeat: no-repeat;
+    background-position: center; 
+
+}
+
+#telescopeLens img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#openWindow{
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    max-width: 600px;
+}
+
+#btns{
+    position: absolute;
+    top: 75%;
+    display: flex;
+    justify-self: space-around;
+}
+
+.brassButtons{
+    width: 50px;
+    padding: 20px;
+}
+
+#leftBtn{
+      transform: rotate(180deg);
+}
+
+#upBtn{
+    transform: rotate(270deg);
+}
+
+#downBtn{
+    transform: rotate(90deg);
+}
+
+
+#scope{
+    position: absolute;
+    top: 45%;
+    height: 200px;
+    rotate: -30deg;
+}
+
+#myform{
+    position: absolute;
+    display: flex;
+    top: 88%;
+    height: 25px;
+}
+
+
+/* Alert box: */
+
+.hidden {
+    display: none;
+}
+
+#customAlert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: white; */
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(253, 254, 244, 0.5);
+    color: black;
+    width: 300px;
+    height: 80%;
+    background: linear-gradient(to bottom right, #f7f49e, #3a3913);
+    z-index: 999; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.alert-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+    
+
+}
+
+#alertMessage {
+    margin-bottom: 15px;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    #telescopeLens{
+        background-size: 80vw 75vh;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+
+}
+
+#okBtn{
+    background-color: rgb(204, 201, 128);
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    box-shadow: -2px 2px 3px rgb(87, 86, 86);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); 
+    z-index: 900; 
+    visibility: hidden; 
+}

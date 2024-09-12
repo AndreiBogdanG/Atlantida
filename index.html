@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="soundTrack">
+        <source src="resources/sounds/king.mp3" type="audio/wav">
+    </audio>
+
+    <audio id="myAudio">
+        <source src="resources/sounds/" type="audio/wav">
+    </audio>
+    <div id="amNotAlex">
+    <h1 id="h1Welcome">Salut și bine ai venit, Alex!</h1>
+        <button class="introBtn1" id="notAlex" onclick="notAlex('Șșșt! Să nu mai spui asta la nimeni! Jocul e făcut SPECIAL pentru Alex!', '')">Nu sunt Alex</button>
+     </div>
+    <img id="mapsImg" src="resources/maps.jpg" alt="">
+    
+
+    <div id="intro">
+        <p class="generalText">Tocmai ți-am pregătit o scurtă aventură în care să rezolvi puzzle-uri, să descifrezi coduri și să operezi mecanisme interesante.<br>Acțiunea se va desfășura în cadrul unui vis, un vis ciudat în care vei porni în căutarea unui loc antic și misterios. Tocmai citești despre el, când oboseala își spune cuvântul. Adormi cu cartea în mână...</p>
+        <button class="button-62" onclick="startGame()">Începe călătoria!</button>
+    </div>
+
+    <div id="puzzle1" class="puzzle" style="display:none">
+        <h2>CONTINENTUL DISPĂRUT. </h2>
+        <div id="pContainer">
+        <p id="atlantisDescription">O legendă spune că Atlantida nu a dispărut, ci doar s-a ascuns de ochii muritorilor de rând. Doar cei cu suflet pur o pot descoperi, după ce trec de anumite probe. Acesta ar fi primul test. <br> Cine a menționat pentru prima dată Atlantida?</p>
+        </div>
+        <div id="theBtns">
+        <button class="button-62" onclick="checkAnswer('A')">Socrate</button>
+        <button class="button-62" onclick="checkAnswer('B')">Herodot</button>
+        <button class="button-62" onclick="checkAnswer('C')">Plato</button>
+        <button class="button-62" onclick="checkAnswer('D')">Thales</button>
+        </div>
+        <p id="response"></p>
+    </div>
+
+    <button class="button-62" id="nextBtnFirstQuiz" onclick="openWondersPage()">Continuă!</button>
+
+    <div id="overlay"></div>
+
+    <div id="introAlert" class="hidden">
+        <div class="alert-content">
+            <span id="alertMessage"></span>
+            <img src="resources/atlantida.jpg" width="100%" alt="Atlantis">
+            <br>
+            <button class = "introBtn" onclick="closeAlert()">DESCOPERĂ</button>
+        </div>
+    </div>
+
+    <div id="notAlexPopup" class="hidden">
+       <div class="alert-content">
+            <span id="notAlexAlertMessage"></span>
+            <br>
+            <button class="introBtn1" id="notAlexBtn" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+    </div>     
+
+
+    <script src="sounds.js"></script>
+    <script src="index.js"> </script>
+    
+</body>
+</html>

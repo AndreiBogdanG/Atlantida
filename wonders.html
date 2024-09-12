@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonders</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="soundTrack">
+        <source src="resources/sounds/ancient1.mp3" type="audio/wav">
+    </audio>
+
+    <audio id="myAudio">
+        <source src="resources/sounds/click.wav" type="audio/wav">
+    </audio>
+
+
+<h1>Ce miracol, ce minune!</h1>
+<p> Ai în față un nou puzzle:</p>
+
+<div class="mainDiv">
+
+    <div id="smallWonders">
+        <img id="w1" class="smallWonder" src="resources/w1.png" alt="Wonder 1">
+        <img id="w2" class="smallWonder" src="resources/w2.png" alt="Wonder 2">
+        <img id="w3" class="smallWonder" src="resources/w3.png" alt="Wonder 3">
+        <img id="w4" class="smallWonder" src="resources/w4.png" alt="Wonder 4">
+        <img id="w5" class="smallWonder" src="resources/w5.png" alt="Wonder 5">
+        <img id="w6" class="smallWonder" src="resources/w6.png" alt="Wonder 6">
+        <img id="w7" class="smallWonder" src="resources/w7.png" alt="Wonder 7">
+    </div>
+
+<div class="map-container">
+
+<img id="wondersMap" src="resources/Wonders.jpg" alt="Wonder Map">
+
+<img id="wonder1" class="wonder" src="resources/led.png" alt="Wonder 1" onclick="checkWonder(1)">
+<img id="wonder2" class="wonder" src="resources/led.png" alt="Wonder 2" onclick="checkWonder(2)">
+<img id="wonder3" class="wonder" src="resources/led.png" alt="Wonder 3" onclick="checkWonder(3)">
+<img id="wonder4" class="wonder" src="resources/led.png" alt="Wonder 4" onclick="checkWonder(4)">
+<img id="wonder5" class="wonder" src="resources/led.png" alt="Wonder 5" onclick="checkWonder(5)">
+<img id="wonder6" class="wonder" src="resources/led.png" alt="Wonder 6" onclick="checkWonder(6)">
+<img id="wonder7" class="wonder" src="resources/led.png" alt="Wonder 7" onclick="checkWonder(7)">
+
+</div>
+</div>
+<p id="wondersParagraph">Hai, nu poate fi atât de greu...</p>
+<br>
+
+<p id="wondersFinalText">Felicitări, ai reușit să pui în ordine cele 7 minuni ale lumii!</p>
+<br>
+<button class="button-62" id="nextBtnWonders" onclick="window.open('philosophers.html', '_self')">Continua!</button>
+
+<div id="overlay"></div>
+
+<div id="customAlert" class="hidden">
+    <div class="alert-content">
+        <span id="alertMessage"></span>
+        <img src="resources/sevenWonders.jpg" width="100%" alt="Atlantis">
+        <br>
+        <button id = "okBtn" onclick="closeAlert()">OK</button>
+    </div>
+</div>
+
+
+    <script src="wonders.js"></script>
+    <script src="sounds.js"></script>
+</body>
+</html>

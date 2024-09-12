@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a walk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<audio id="soundTrack">
+        <source src="resources/sounds/ancient1.mp3" type="audio/wav">
+</audio>
+<audio id="myAudio">
+        <source src="resources/sounds/goodStep.wav" type="audio/wav">
+</audio>
+
+<h1>Vezi pe unde calci!</h1>
+
+    <div id="mainWalkDiv">
+    <div id="floor"></div>
+    </div>
+<br>
+
+    <form id="alexandriaForm" action="">
+        <input type="text" id="userAnswer" name="fname" value="" placeholder="Răspuns"><br>
+        <input class="introBtn1" id="alexandriaBtn" type="submit" value="Trimite">
+    </form>
+
+
+    <div id="overlay"></div>
+
+    <div id="customAlert" class="hidden">
+        <div class="alert-content">
+            <!-- <span id="alertMessage"></span> -->
+            <p>Părăsești statuile și mergi către țărm. <br><br>"Ce o fi cu dalele astea de piatră?", te întrebi. Sub lumina lunii, parcă vezi ceva la capătul lor. Începi să pășești cu grijă, atent și-n stânga și-n dreapta... </p>
+            <img src="resources/path.png" width="300px" alt="Atlantis">
+            <p>În cap îți răsună un proverb grecesc: <br><br>"Τα πολλά λόγια είναι φτώχια." </p>
+            
+            <button id = "okBtn" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+    
+    
+<script src="walk.js"></script>
+<script src="sounds.js"></script>
+</body>
+</html>

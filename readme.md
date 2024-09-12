@@ -1,0 +1,1 @@
+Embark on an enchanting adventure to uncover the lost city of Atlantis! This magic journey, crafted as a special gift for a friend of mine, invites you to solve puzzles, complete quests and explore mysterious lands. Dive into this story and help uncover hidden secrets, all while enjoying this magical game!

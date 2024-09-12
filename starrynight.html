@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starry Night</title>
+    <link rel="stylesheet" href="starrynight.css">
+
+</head>
+<body>
+    <audio id="soundTrack">
+        <source src="resources/sounds/ancient1.mp3" type="audio/wav">
+    </audio>
+
+    <audio id="myAudio">
+        <source src="resources/sounds/click.wav" type="audio/wav">
+    </audio>
+   
+    <div id="mainDiv">
+
+    <h1 id="h1">Ce seară minunată!</h1>
+
+    <img id="openWindow" src="resources/window.png" alt="">
+    <img id="scope" src="resources/scope.png" alt="Scope">
+
+<div id="skyContainer">
+   
+    <img id="starrySky" src="resources/starry-sky.jpg" alt="Starry Sky">
+    <div id="telescopeLens">
+        <img id="friends" src="resources/friends.png" alt="" style="visibility: hidden;">
+    </div>
+</div>
+
+<div id="btns">
+<img id="leftBtn" class = "brassButtons" src="resources/brassArrow.png"  alt="left" onclick="moveLens('left')">
+<img id="upBtn" class = "brassButtons" src="resources/brassArrow.png"  alt="up" onclick="moveLens('up')">
+<img id="downBtn" class = "brassButtons" src="resources/brassArrow.png"  alt="down" onclick="moveLens('down')">
+<img id="rightBtn" class = "brassButtons" src="resources/brassArrow.png"  alt="right" onclick="moveLens('right')">
+</div>
+
+
+
+<form id="myform" action="">
+    <input type="text" id="userAnswer" name="fname" value="" placeholder="Scrie aici parola:"><br>
+    <input class="button-62" id="btnSubmit" type="submit" value="Trimite">
+</form>
+
+</div>
+
+<div id="overlay"></div>
+
+<div id="customAlert" class="hidden">
+    <div class="alert-content">
+        <span id="alertMessage"></span>
+        <img src="resources/chest.png" width="200px" alt="Atlantis">
+        <br>
+        <button id = "okBtn" onclick="closeAlert()">OK</button>
+    </div>
+</div>
+
+
+
+<script src="starrynight.js"></script>
+<script src="sounds.js"></script>
+
+
+</body>
+</html>
