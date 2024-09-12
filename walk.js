@@ -16,7 +16,7 @@ for (let i = 1; i < 25; i++) {
 
     tileDiv.className = 'tileDiv';
 
-    tile.src = '/resources/tile.jpg';
+    tile.src = 'resources/tile.jpg';
     tile.width = '75';
     tile.id = `tile${i}`;
     tile.setAttribute('onclick',`checkTile(${i})`);
