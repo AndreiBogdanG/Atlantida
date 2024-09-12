@@ -32,6 +32,7 @@ function rotateLeft(part){
     element.style.transform = degreeString;
     console.log(degrees[part.id]);
     checkAlignment();
+    stopSound();
     playSound();
 }
 

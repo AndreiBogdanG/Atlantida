@@ -37,12 +37,15 @@ function showCustomAlert(message, name) {
     document.getElementById('overlay').style.visibility = "visible";
 }
 
-function closeAlert() {
+function closeAlert(music) {
     document.getElementById('introAlert').style.visibility = "hidden";
     document.getElementById('overlay').style.visibility = "hidden";
     document.getElementById('notAlexPopup').style.visibility = "hidden";
-    playSoundTrack();
+    if(music==='') {
+        playSoundTrack();
+    }
 }
+
 
 function notAlex(message, name){
     const alertBox = document.getElementById('notAlexPopup');

@@ -6,6 +6,11 @@ function playSound() {
     effectSound.play();
 }
 
+function stopSound(){
+    effectSound.load();
+}
+
+
 function playCustomSound(sound){
 effectSound.setAttribute("src",`/resources/sounds/${sound}.wav`);
 effectSound.play();
