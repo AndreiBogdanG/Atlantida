@@ -22,8 +22,6 @@ for (let i=0; i < imgButtons.length; i++){
     }, false);
 }
 
-
-
 function rotateLeft(part){
    
     element = document.getElementById(part.id);
@@ -35,7 +33,6 @@ function rotateLeft(part){
     stopSound();
     playSound();
 }
-
 
 function rotateRight(part){
    
@@ -138,7 +135,6 @@ function lightsOn(){
         outside.style.borderRadius = "50%";
     };
 };
-
 
 // Alert:
 

@@ -16,34 +16,38 @@
         <source src="resources/sounds/ancient2.mp3" type="audio/wav">
     </audio>
 
-    <div id="customAlert" class="hidden">
-        <div class="alert-content">
-            <span id="alertMessage"></span>
-            <img src="resources/statues.jpg" width="300px" alt="">
-            <button id="okBtn" onclick="closeAlert()">OK</button>
-        </div>
-    </div>
-
-<h1>Ordinea cronologică după anul nașterii îți va dezvălui un număr:</h1>
+ <h1>Filosofii antici</h1>
+<p id="pPhilosophers">Așează personajele în ordine cronologică după anul nașterii pentru a afla un număr. <br> Mai vezi și alt indiciu?</p>
 
 <div class="mainDiv">
 <div>
+<hr>
+<div id="image-container">
 <img id="philosophersMap" src="resources/Philosophers.jpg" alt="">
+<img id="scroll" src="resources/scroll1.png" alt="Closed Scroll" onclick="toggleScroll()">
+</div>
 
-<p id="philosophersData"> 
-    
-</p>
+<p id="philosophersData"></p>
 <hr>
 
-
-<div id="overlay"></div>
-
 <form id="myform" action="">
-    <input type="text" id="userAnswer" name="fname" placeholder="Scrie nr. convertit în litere" ><br>
+    <input type="text" id="userAnswer" name="fname" placeholder="Scrie aici numărul convertit în litere" ><br>
     <input class="button-62" id="btnSubmitPhilosophers" type="submit" value="Răspunde">
 </form>
 </div>
 
+
+<div id="overlay"></div>
+
+<div id="customAlert" class="hidden">
+    <div class="alert-content">
+        <!-- <span id="alertMessage"></span> -->
+        <p>"Statuile grecilor antici erau exagerat de senine, asa sperau ei ca vor arata oamenii viitorului" (Vasile Ghica).</p>
+    <img src="resources/statues.jpg" width="300px" alt="">
+    <p>Decorul se schimbă, iar în fața ta apar - deodată - statuile mai multor filosofi. Fiecare statuie se conectează cumva la o cifră. Nu prea știi ce ai de făcut, dar peste tot în jur par să fie instrucțiuni...</p>
+    <button id="okBtn" onclick="closeAlert()">OK</button>
+    </div>
+</div>
 
 </div>
     <script src="philosophers.js"></script>

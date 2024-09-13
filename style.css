@@ -161,12 +161,44 @@ max-width: 450px;
     font-size: small;
 }
 
+#image-container{
+    position: relative;
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
 #philosophersMap {
-    /* max-width: 600px; */
     width: 100%;
     height: auto;
     display: block;
 }
+
+#pPhilosophers{
+    margin: 5px;
+}
+
+#scroll{
+    position: absolute;
+    top: 43%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+}
+
+#userAnswer{
+    background-image: url(resources/emptyScroll.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 300px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
 
 
 @media only screen and (min-width: 1000px) {
@@ -322,7 +354,7 @@ max-width: 450px;
 }
 
 #introAlert {
-    width: 350px;
+    width: 300px;
     height: 50%;
 }
 

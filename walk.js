@@ -31,6 +31,19 @@ for (let i = 1; i < 25; i++) {
 }
 
 
+// prevent long press on an image bring the popup menu on phones:
+const tileImg = document.getElementsByClassName('tileDiv');
+for (let i=0; i < tileImg.length; i++){
+    tileImg[i].addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    }, false);
+}
+
+
+
+
+
+
 
 function checkTile(i){
 counter++;

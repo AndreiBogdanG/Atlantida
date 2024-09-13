@@ -6,6 +6,27 @@ const wonders = ['Marea Piramidă din Giza', 'Gradinile suspendate ale Semiramid
 
 showCustomAlert('Adâncindu-te în vis,  observi un peisaj incredibil, o adevărată minune. Nu l-ai mai văzut până acum, dar parcă îl cunoști de o viață.','');
 
+// prevent long press on an image bring the popup menu on phones:
+const imgButtons = document.getElementsByClassName('wonder');
+for (let i=0; i < imgButtons.length; i++){
+    imgButtons[i].addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    }, false);
+}
+
+const smallWonders = document.getElementsByClassName('smallWonder');
+for (let i=0; i < smallWonders.length; i++){
+    smallWonders[i].addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    }, false);
+}
+
+
+
+
+
+
+
 
 function checkWonder(wonder) {
    

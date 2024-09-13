@@ -1,9 +1,6 @@
 const form = document.getElementById('myform');
 
-showCustomAlert('Decorul se schimbă, iar în fața ta apar - deodată - statuile mai multor filosofi. Fiecare statuie se conectează cumva la o cifră. Nu prea știi ce ai de făcut, dar peste tot în jur par să fie instrucțiuni...','');
-
-
-
+showCustomAlert('','');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault(); 
@@ -30,8 +27,8 @@ form.addEventListener('submit', function(event) {
 
 function showCustomAlert(message, name) {
     const alertBox = document.getElementById('customAlert');
-    const alertMessage = document.getElementById('alertMessage');
-    alertMessage.textContent = `${name}  ${message}`;
+    // const alertMessage = document.getElementById('alertMessage');
+    // alertMessage.textContent = `${name}  ${message}`;
     document.getElementById('overlay').style.visibility = "visible";
 }
 
@@ -39,4 +36,16 @@ function closeAlert() {
     document.getElementById('customAlert').style.visibility = "hidden";
     document.getElementById('overlay').style.visibility = "hidden";
     playSoundTrack();
+}
+
+function toggleScroll(){
+   const scroll = document.getElementById('scroll');
+
+   if (scroll.getAttribute('src') === 'resources/scroll1.png'){
+    scroll.setAttribute('src','resources/scroll2.png');
+    scroll.style.width = "50%";
+   } else {
+    scroll.setAttribute('src','resources/scroll1.png');
+    scroll.style.width = "10%";
+   }
 }
