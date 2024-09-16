@@ -33,13 +33,20 @@ for (let i = 1; i < 25; i++) {
 
 // prevent long press on an image bring the popup menu on phones:
 const tileImg = document.getElementsByClassName('tileDiv');
+let lastTouchEnd = 0;
 for (let i=0; i < tileImg.length; i++){
+    tileImg[i].addEventListener('touchstart', function(event) {
+        let now = new Date().getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault(); 
+        }
+
+        lastTouchEnd = now;
+    }, false);
     tileImg[i].addEventListener('contextmenu', function(event) {
         event.preventDefault();
     }, false);
 }
-
-
 
 
 

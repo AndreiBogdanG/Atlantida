@@ -14,13 +14,28 @@ let degrees = {cross: 0, bigWheel: 0, outside: 0, smallWheel: 0, inside: 0, text
 showCustomAlert('Mergi către ruine, iar la baza unei coloane găsești - pe jumătate ieșit din nisip - un dispozitiv ciudat. Îl ridici și îl întorci pe toate părțile. Pe spate are o serie de butoane din piatră...','');
 
 
-// prevent default menu on phone when long press a button:
+
+// prevent double-clicking on iPhones (300 ms) and the default menu on long press:
 const imgButtons = document.getElementsByClassName('stoneBtns');
-for (let i=0; i < imgButtons.length; i++){
+let lastTouchEnd = 0;
+for (let i = 0; i < imgButtons.length; i++) {
+    imgButtons[i].addEventListener('touchstart', function(event) {
+        let now = new Date().getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault(); 
+        }
+
+        lastTouchEnd = now;
+    }, false);
+
     imgButtons[i].addEventListener('contextmenu', function(event) {
         event.preventDefault();
     }, false);
+
+
 }
+
+
 
 function rotateLeft(part){
    

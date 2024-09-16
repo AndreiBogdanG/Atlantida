@@ -22,9 +22,20 @@ if (screenWidth > 800){
 
 showCustomAlert('Ajungi în siguranță la capătul aleii pietruite, iar în față ai un cufăr de lemn. Scotocind prin el, găsești o lunetă și o schiță cu niște ruine grecești. Iei luneta și o îndrepți către Acropole, cu speranța că vei găsi ceva.','');
 
-const imgButtons = document.getElementsByClassName('brassButtons');
 
+
+// prevent double-clicking on iPhones (300 ms) and the default menu on long press:
+const imgButtons = document.getElementsByClassName('brassButtons');
+let lastTouchEnd = 0;
 for (let i=0; i < imgButtons.length; i++){
+    imgButtons[i].addEventListener('touchstart', function(event) {
+        let now = new Date().getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault(); 
+        }
+
+        lastTouchEnd = now;
+    }, false);
     imgButtons[i].addEventListener('contextmenu', function(event) {
         event.preventDefault();
     }, false);
