@@ -4,11 +4,11 @@ showCustomAlert('','');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault(); 
-    const answer = document.getElementById('userAnswer').value;
+    const answer = document.getElementById('userAnswerPh').value;
     
     if (answer.toLowerCase() === "ellada" ){
         console.log('Corect, raspunsul era ', answer);
-        document.getElementById('userAnswer').value = 'Răspuns corect!';
+        document.getElementById('userAnswerPh').value = 'Răspuns corect!';
         document.getElementById("btnSubmitPhilosophers").setAttribute("value", "Continuă");
 
     } else if (answer === "Răspuns corect!"){
@@ -16,8 +16,8 @@ form.addEventListener('submit', function(event) {
 
     } else {
         document.getElementById("btnSubmitPhilosophers").setAttribute("value", "Trimite");
-        document.getElementById('userAnswer').setAttribute('placeHolder','Mai încearcă!');
-        document.getElementById('userAnswer').value = '';
+        document.getElementById('userAnswerPh').setAttribute('placeHolder','Mai încearcă!');
+        document.getElementById('userAnswerPh').value = '';
         console.log('Raspuns gresit!');
         // form.reset();
     }

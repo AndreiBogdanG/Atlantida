@@ -1,10 +1,16 @@
+@font-face {
+    font-family: 'Greek';
+    src: url('resources/Greek.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal;
+}
+
+
 .puzzle { 
     margin: 20px;
 }
 
 body {
-    
-    font-family: "Calistoga", serif;
     font-family: "Aref Ruqaa Ink", serif;
     text-align: center;
     margin: 0;
@@ -169,6 +175,13 @@ max-width: 450px;
 }
 
 
+#questionMark{
+    color: red;
+    font-weight: bolder;
+    margin-left: 2px;
+}
+
+
 #philosophersMap {
     width: 100%;
     height: auto;
@@ -187,7 +200,8 @@ max-width: 450px;
     width: 10%;
 }
 
-#userAnswer{
+#userAnswer, #userAnswerPh{
+
     background-image: url(resources/emptyScroll.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -197,8 +211,19 @@ max-width: 450px;
     background-color: transparent;
     border: none;
     outline: none;
-}
 
+    /* font-family: 'Greek', sans-serif;  */
+    font-weight: 10px;
+    font-size: x-large;
+    font-style: normal;
+    color: #414048;
+}
+#userAnswerPh{
+   width: 350px;
+    font-family: "Aref Ruqaa Ink", serif;
+    font-size: medium;
+    font-weight: bold;
+}
 
 
 @media only screen and (min-width: 1000px) {
@@ -425,10 +450,11 @@ max-width: 450px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#tileLetters {
+.tileLetters {
     position: absolute;
     color: rgb(113, 84, 22);
-    font-size: xx-large;
+    font-family: 'Greek';
+    font-size: 50px;
     text-shadow: -1px 1px 2px rgb(54, 42, 4);
     pointer-events: none;
 }
@@ -441,6 +467,7 @@ max-width: 450px;
 }
 #alexandriaForm{
     visibility: hidden;
+    
     }
 #alexandriaBtn{
     margin-top: 10px;

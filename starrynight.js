@@ -30,7 +30,7 @@ let lastTouchEnd = 0;
 for (let i=0; i < imgButtons.length; i++){
     imgButtons[i].addEventListener('touchstart', function(event) {
         let now = new Date().getTime();
-        if (now - lastTouchEnd <= 300) {
+        if (now - lastTouchEnd <= 180) {
             event.preventDefault(); 
         }
 
