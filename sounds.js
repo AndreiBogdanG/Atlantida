@@ -12,7 +12,7 @@ function stopSound(){
 
 
 function playCustomSound(sound){
-effectSound.setAttribute("src",`/resources/sounds/${sound}.wav`);
+effectSound.setAttribute("src",`resources/sounds/${sound}.wav`);
 effectSound.play();
 }
     
