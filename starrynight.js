@@ -24,14 +24,35 @@ showCustomAlert('Ajungi în siguranță la capătul aleii pietruite, iar în fa�
 
 
 
+// Function to detect device:
+function detectDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android/i.test(userAgent)) {
+        console.log("User is on Android");
+        return "Android";
+    } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        console.log("User is on iOS");
+        return "iOS";
+    } else {
+        console.log("User is on another device");
+        return "Other";
+    }
+}
+
 // prevent double-clicking on iPhones (300 ms) and the default menu on long press:
+
+if (detectDevice()==='iOS'){
 const imgButtons = document.getElementsByClassName('brassButtons');
 let lastTouchEnd = 0;
 for (let i=0; i < imgButtons.length; i++){
     imgButtons[i].addEventListener('touchstart', function(event) {
         let now = new Date().getTime();
-        if (now - lastTouchEnd <= 180) {
-            event.preventDefault(); 
+        if (now - lastTouchEnd <= 400) {
+                     moveDistance = 10;
+                     event.preventDefault(); 
+
+            moveLens(direction);
+
         }
 
         lastTouchEnd = now;
@@ -40,6 +61,13 @@ for (let i=0; i < imgButtons.length; i++){
         event.preventDefault();
     }, false);
 }
+
+}
+
+
+
+
+
 
 
 function setInitialLensPosition() {
@@ -77,6 +105,7 @@ function moveLens(direction) {
                 newLensX -= moveDistance;
                 scopeRotation -= rotationFactor;
                 scope.style.transform = `rotate(${scopeRotation}deg)`;
+                scope.style.transition = 'transform 0.5s'; 
                 if (clicks===10) {
                     document.getElementById('friends').style.visibility = "visible"
                 } else {
@@ -92,6 +121,7 @@ function moveLens(direction) {
                 newLensX += moveDistance;
                 scopeRotation += rotationFactor;
                 scope.style.transform = `rotate(${scopeRotation}deg)`;
+                scope.style.transition = 'transform 0.5s'; 
                 if (clicks===10) {
                     document.getElementById('friends').style.visibility = "visible"
                 } else {

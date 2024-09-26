@@ -35,6 +35,7 @@ for (let i = 1; i < 25; i++) {
     tileDiv.append(letter);
 }
 
+
 // prevent long press on an image bring the popup menu on phones:
 const tileImg = document.getElementsByClassName('tileDiv');
 let lastTouchEnd = 0;

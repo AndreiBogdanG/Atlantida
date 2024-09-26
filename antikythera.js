@@ -14,10 +14,27 @@ let degrees = {cross: 0, bigWheel: 0, outside: 0, smallWheel: 0, inside: 0, text
 showCustomAlert('Mergi către ruine, iar la baza unei coloane găsești - pe jumătate ieșit din nisip - un dispozitiv ciudat. Îl ridici și îl întorci pe toate părțile. Pe spate are o serie de butoane din piatră...','');
 
 
+// Function to detect device:
+function detectDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android/i.test(userAgent)) {
+        console.log("User is on Android");
+        return "Android";
+    } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        console.log("User is on iOS");
+        return "iOS";
+    } else {
+        console.log("User is on another device");
+        return "Other";
+    }
+}
+
 
 // prevent double-clicking on iPhones (300 ms) and the default menu on long press:
+if (detectDevice()==='iOS'){
 const imgButtons = document.getElementsByClassName('stoneBtns');
 let lastTouchEnd = 0;
+
 for (let i = 0; i < imgButtons.length; i++) {
     imgButtons[i].addEventListener('touchstart', function(event) {
         let now = new Date().getTime();
@@ -31,11 +48,8 @@ for (let i = 0; i < imgButtons.length; i++) {
     imgButtons[i].addEventListener('contextmenu', function(event) {
         event.preventDefault();
     }, false);
-
-
 }
-
-
+}
 
 function rotateLeft(part){
    
@@ -43,6 +57,8 @@ function rotateLeft(part){
     degrees[part.id] -= 5;
     degreeString = 'rotate(' + degrees[part.id]+ 'deg)';
     element.style.transform = degreeString;
+    element.style.transition = 'transform 0.5s'; 
+
     console.log(degrees[part.id]);
     checkAlignment();
     stopSound();
@@ -55,6 +71,7 @@ function rotateRight(part){
     degrees[part.id] += 5;
     degreeString = 'rotate(' + degrees[part.id] + 'deg)';
     element.style.transform = degreeString;
+    element.style.transition = 'transform 0.5s'; 
     console.log(degrees[part.id]);
     checkAlignment();
     playSound();
