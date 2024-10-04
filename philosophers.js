@@ -1,4 +1,5 @@
 const form = document.getElementById('myform');
+let isAnswerCorrect = false;
 
 showCustomAlert('','');
 
@@ -9,9 +10,10 @@ form.addEventListener('submit', function(event) {
     if (answer.toLowerCase() === "ellada" ){
         console.log('Corect, raspunsul era ', answer);
         document.getElementById('userAnswerPh').value = 'Răspuns corect!';
+        isAnswerCorrect = true;
         document.getElementById("btnSubmitPhilosophers").setAttribute("value", "Continuă");
 
-    } else if (answer === "Răspuns corect!"){
+    } else if (isAnswerCorrect){
         window.open('walk.html',"_self");
 
     } else {
@@ -27,8 +29,6 @@ form.addEventListener('submit', function(event) {
 
 function showCustomAlert(message, name) {
     const alertBox = document.getElementById('customAlert');
-    // const alertMessage = document.getElementById('alertMessage');
-    // alertMessage.textContent = `${name}  ${message}`;
     document.getElementById('overlay').style.visibility = "visible";
 }
 

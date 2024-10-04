@@ -9,6 +9,7 @@ let scopeRotation = 0;
 let moveDistance = 5; // Distance to move in each direction
 let clicks = 0;
 const screenWidth = window.innerWidth;
+let isAnswerCorrect = false;
 
 let rotationFactor = 1.35;
 const windowPicWidth = openWindow.offsetWidth;;
@@ -52,7 +53,6 @@ for (let i=0; i < imgButtons.length; i++){
                      event.preventDefault(); 
 
             moveLens(direction);
-
         }
 
         lastTouchEnd = now;
@@ -61,14 +61,7 @@ for (let i=0; i < imgButtons.length; i++){
         event.preventDefault();
     }, false);
 }
-
 }
-
-
-
-
-
-
 
 function setInitialLensPosition() {
     const windowRect = openWindow.getBoundingClientRect();
@@ -154,22 +147,19 @@ form.addEventListener('submit', function(event) {
     event.preventDefault(); 
     const answer = document.getElementById('userAnswer').value;
     
-
     if (answers.includes(answer.toLowerCase() ) ){
         document.getElementById('userAnswer').value = 'Răspuns corect!';
+        isAnswerCorrect = true;
         document.getElementById("btnSubmit").setAttribute("value", "Continua");
 
-    } else if (answer === "Răspuns corect!"){
+    } else if (isAnswerCorrect){
         window.open('antikythera.html',"_self");
 
     } else {
         document.getElementById("btnSubmit").setAttribute("value", "Trimite");
         document.getElementById('userAnswer').value = '';
        }
-
 });
-
-
 
 function showCustomAlert(message, name) {
     const alertBox = document.getElementById('customAlert');
