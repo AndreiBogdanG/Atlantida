@@ -42,7 +42,7 @@ function detectDevice() {
 
 // prevent double-clicking on iPhones (300 ms) and the default menu on long press:
 
-if (detectDevice()==='iOS'){
+// if (detectDevice()==='iOS'){
 const imgButtons = document.getElementsByClassName('brassButtons');
 let lastTouchEnd = 0;
 for (let i=0; i < imgButtons.length; i++){
@@ -61,7 +61,7 @@ for (let i=0; i < imgButtons.length; i++){
         event.preventDefault();
     }, false);
 }
-}
+// }
 
 function setInitialLensPosition() {
     const windowRect = openWindow.getBoundingClientRect();

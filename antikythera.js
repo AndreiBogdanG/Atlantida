@@ -31,7 +31,7 @@ function detectDevice() {
 
 
 // prevent double-clicking on iPhones (300 ms) and the default menu on long press:
-if (detectDevice()==='iOS'){
+// if (detectDevice()==='iOS'){
 const imgButtons = document.getElementsByClassName('stoneBtns');
 let lastTouchEnd = 0;
 
@@ -49,7 +49,7 @@ for (let i = 0; i < imgButtons.length; i++) {
         event.preventDefault();
     }, false);
 }
-}
+//}
 
 function rotateLeft(part){
    

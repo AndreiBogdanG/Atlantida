@@ -86,6 +86,7 @@ form.addEventListener('submit', function(event) {
         document.getElementById('userAnswer').style.fontFamily = "Aref Ruqaa Ink";
         document.getElementById('userAnswer').value = 'Răspuns corect!';
         document.getElementById("alexandriaBtn").setAttribute("value", "Continuă");
+        document.getElementById('userAnswer').setAttribute("disabled","");
 
         revealLetters();
 
